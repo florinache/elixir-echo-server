@@ -18,7 +18,7 @@ node {
     }
 
     stage('Build Docker') {
-      docker.withRegistry('https://registry.hub.docker.com/', 'dockerhub') {
+      docker.withRegistry('https://registry.hub.docker.com/', '53df8d5f-379a-4578-b23c-dd160d50b697') {
         def customImage = docker.build("florinache/elixir-echo-server:${env.BUILD_ID}")
         customImage.push()
       }
