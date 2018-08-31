@@ -60,8 +60,8 @@ node {
       node {
         //label 'prod'
         timeout(time: 1, unit: 'HOURS') {
-          // this only works if you're the user "admin"
-          input(message: 'Shall we deploy to Production?', submitter: 'admin')
+          // this only works if you're the user "florinache"
+          input(message: 'Shall we deploy to Production?', submitter: 'florinache')
         }
         try {
           sh """
